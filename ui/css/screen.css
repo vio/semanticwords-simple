@@ -1,0 +1,259 @@
+/* 	
+    
+	Semantic Words - Simple
+	========================================================================================================================
+
+    media: all 
+	browser: all 
+ 
+	LEGEND: 
+	------------------------------------------------------------------------------------------------------------------------
+
+	1 GENERAL
+		1.1 global reset
+		1.2 default
+		1.3 headings and paragraphs 
+		1.4 links
+		1.5 lists
+		1.6 tables
+		1.7 forms
+		1.8 others 
+ 
+	2 COMMON ELEMENTS 
+		2.1 clearfix
+		2.2 image replacement
+		2.3 hidden 
+		
+	3 LAYOUT
+		3.1 accessibility-nav
+
+	4 LAYOUTS ELEMENTS 
+ 
+*/ 
+ 
+
+/*  -1- GENERAL 
+ *  ========================================================================================================================*/
+ 
+
+	/* -1.1- global reset 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; } 
+ 
+
+	/* -1.2- default 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+ 
+	html{	 
+		font-size: medium;
+		text-align: center;
+		}
+		
+	body{ 
+		margin: 0 auto;
+		width: 60em;
+		color: #444; 
+		font: normal normal normal 75%/150% Georgia,"Times New Roman",serif; 
+		text-align: left;
+		} 
+	 
+	/* -1.3- headings and paragraphs 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	h1, h2, h3, h4, h5, h6 {
+		margin: .5em 0;
+		color: #111;
+		font-weight: normal;
+		}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: #111;
+			text-decoration: none;
+			}
+	
+	h1{ 
+		margin: 0 0 .5em;
+		font-size: 2em;
+		line-height: 1.2em;
+		}
+		
+	h2{ 
+		font-size: 1.5em;
+		line-height: 1.2em;
+		}
+		
+	h3{ 
+		font-size: 1.16em;
+		line-height: 1.2em;
+		}
+		
+	h4{ 
+		font-size: 1em;
+		line-height: 1.2em;
+		font-weight: bold;
+		}
+		
+	h5 {
+		font-size: .833em;
+		line-height: 1.2em;
+		text-transform: uppercase;
+		}
+
+	h6 {
+		}
+		
+	p{		 
+		margin: 0 0 1em;
+		} 
+
+ 
+	/* -1.4- links 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	
+	a:link, a:active, a:visited, a:hover {
+		color: #000; 
+		text-decoration: underline;
+		}
+
+	a:active {
+		}
+		
+	a:visited {
+		color: #444;
+		}
+		
+	a:hover { 
+		text-decoration: none;
+		} 
+
+	/* -1.5- lists 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	/* -1.6- tables 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+
+	/* -1.7- forms 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	
+	input, textarea, select { 
+		color: #333; 
+		font: normal normal 1em/1.2em Verdana,Arial, Helvetica,sans; 
+		} 
+	 
+	/* -1.8- others 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	hr{ 
+		display: none;
+		} 
+ 
+	 
+/*  -2- COMMON ELEMENTS 
+ *  ========================================================================================================================*/
+
+	/* -2.1- clearfix 
+	 * Clear fix workaround. 
+	 * coresponding hasLayout fix on IE stylesheet is required
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	.clearfix:after 
+		{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden; 
+		}
+
+	/* -2.2- image replacement 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	/* Gilder method  */
+	.ir {
+		display: block;
+		overflow: hidden;
+		position: relative;
+		}
+		
+		.ir span {
+			display: block;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background: transparent no-repeat left top;
+			}
+
+	/* phark method */
+	.ir_p {
+		display: block;
+		overflow: hidden;
+		background: transparent no-repeat left top;
+		text-align: left;
+		text-indent: -1000em;
+		}
+
+	/* -2.3- hidden 
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	.hidden,
+	#skip-links
+		{
+		position: absolute;
+		left: -1000em;
+		text-align: left;
+		}
+
+ 
+/*  -3- LAYOUT  
+ *	========================================================================================================================*/
+ 
+	/* -3.1- accessibility-nav
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+
+	#accessibility-nav {  
+		/* ->2.3 */
+		} 
+
+
+/*  -4- LAYOUT ELEMENTS  
+ *  ========================================================================================================================*/
+
+/* skip-links */
+#skip-links {
+	/* hidden */
+
+	}
+
+
+/* header */
+#header {
+	margin: 0 0 2em;
+	border-bottom: 1px solid #CCC;
+	padding: 2em 0;
+	}
+
+	#header h1 , #header a.logo {
+		margin: 0;
+		font-size: 2em;
+		line-height: 1em;
+		}
+
+	#header h1 a, #header a.logo {
+		color: #000;
+		text-decoration: none;
+		}
+
+	#header p {
+		margin: 0;
+		color: #888;
+		}
+
+
+/* footer */
+#footer {
+	border-top: 1px solid #CCC;
+	padding: 1em 0;
+	}
+
