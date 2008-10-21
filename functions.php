@@ -1,5 +1,8 @@
 <?
 
+// ui url
+define( SW_UI, get_bloginfo( "template_url" ) . "/ui" );
+
 // theme variables
 $sw_heading = "";
 
