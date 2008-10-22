@@ -28,6 +28,14 @@
 		3.1 accessibility-nav
 
 	4 LAYOUTS ELEMENTS 
+
+
+	colorscheme
+
+	cs1 = #111
+	cs2 = #333
+	cs3 = #777
+	cs4 = #DDD
  
 */ 
  
@@ -51,9 +59,9 @@
 		
 	body{ 
 		margin: 0 auto;
-		width: 60em;
-		color: #444; 
-		font: normal normal normal 75%/150% Georgia,"Times New Roman",serif; 
+		width: 67em;
+		color: #333; 
+		font: normal normal normal 75%/175% Verdana,Arial,sans; 
 		text-align: left;
 		} 
 	 
@@ -63,10 +71,20 @@
 		margin: .5em 0;
 		color: #111;
 		font-weight: normal;
+		font-family: Georgia,"Times New Roman",serif; 
 		}
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+
+		h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
+		h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active,
+		h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+			{
 			color: #111;
 			text-decoration: none;
+			}
+
+		h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+			{
+			text-decoration: underline;
 			}
 	
 	h1{ 
@@ -109,15 +127,12 @@
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 	
 	a:link, a:active, a:visited, a:hover {
-		color: #000; 
+		color: #111; 
 		text-decoration: underline;
 		}
 
-	a:active {
-		}
-		
 	a:visited {
-		color: #444;
+		color: #555;
 		}
 		
 	a:hover { 
@@ -126,6 +141,17 @@
 
 	/* -1.5- lists 
 	 * ---------------------------------------------------------------------------------------------------------------------*/
+	ul, ol {
+		margin: 1em;
+		}
+
+	ul li {
+		list-style: inside disc none;
+		}
+
+	ol li {
+		list-style: inside decimal none;
+		}
 
 	/* -1.6- tables 
 	 * ---------------------------------------------------------------------------------------------------------------------*/
@@ -135,7 +161,7 @@
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 	
 	input, textarea, select { 
-		color: #333; 
+		color: #111; 
 		font: normal normal 1em/1.2em Verdana,Arial, Helvetica,sans; 
 		} 
 	 
@@ -156,7 +182,9 @@
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 
 	.clearfix:after ,
-	#container:after
+	#header:after,
+	#container:after,
+	ol.posts .details:after
 		{
 		content: ".";
 		display: block;
@@ -199,7 +227,9 @@
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 
 	.hidden,
-	#skip-links
+	#skip-links,
+
+	ol.posts .details h3
 		{
 		position: absolute;
 		left: -1000em;
@@ -221,15 +251,19 @@
 	/* -3.2- header
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 	#header {
-		margin: 0;
+		margin: 0 0 1px;
 		border-bottom: 1px solid #DDD;
 		padding: 2em 0;
 		}
 
+		/* logo */
 		#header h1 , #header a.logo {
-			margin: 0;
-			font-size: 2em;
+			float: left;
+			margin: 0 .16em 0 0;
+			font-size: 3em;
+			font-family: Georgia,"Times New Roman",serif;
 			line-height: 1em;
+			letter-spacing: -.01em;
 			}
 
 		#header h1 a, #header a.logo {
@@ -237,14 +271,18 @@
 			text-decoration: none;
 			}
 
+		/* motto */
 		#header p {
-			margin: 0;
-			color: #888;
+			margin: 1.3em 0 0;
+			color: #777;
+			font: italic normal normal 1.167em/1.2em Georgia,"Times New Roman",serif;
+			letter-spacing: 0.01em;
 			}
 
 	/* -3.3- container
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 	#container {
+		border-top: 1px solid #DDD;
 		/* clearfix */
 		padding: 2em 0;
 		}
@@ -254,7 +292,7 @@
 			margin-right: -100px;
 			padding-right: 2em;
 			float: left;
-			width: 35em;
+			width: 43em;
 			}
 
 		#aside {
@@ -262,7 +300,7 @@
 			border-left: 1px solid #DDD;
 			padding-left: 2em;
 			float: right;
-			width: 21em;
+			width: 20em;
 			}
 
 	/* -3.4- footer
@@ -270,13 +308,84 @@
 	#footer {
 		border-top: 1px solid #DDD;
 		padding: 1em 0;
+		color: #777;
+		font-size: .916em;
 		}
+
+		#footer p {
+			margin: 0 0 1em;
+			}
+
+		#footer .subscribe h3 {
+			display: inline;
+			}
+
+		#footer .subscribe ul {
+			display: inline;
+			margin: 0;
+			}
+
+		#footer .subscribe li {
+			display: inline;
+			list-style: outside none none;
+			}
 
 
 /*  -4- LAYOUT ELEMENTS  
  *  ========================================================================================================================*/
 
+	/* posts */	
+	ol.posts {
+		margin: 0;
+		}
+
+		ol.posts li {
+			margin: 0 0 2em;
+			list-style: outside none none;
+			}
+
+		ol.posts h2 {
+			margin: 0;
+			}
+
+		ol.posts p.date {
+			color: #777;
+			font-size: .916em;
+			}
+
+		/* meta */
+		ol.posts .details {
+			/* clearfix */
+			margin: 1em 0 0;
+			color: #777;
+			font-size: .916em;
+			}
+
+			ol.posts .details h3 {
+				/* hidden */
+				}
+
+			ol.posts .details ul {
+				margin: 0;
+				}
+
+			ol.posts .details li {
+				margin: 0 1em 0 0;
+				padding: 0;
+				float: left;
+				}
+
+			ol.posts .details h4 {
+				margin: 0;
+				display: inline;
+				color: #777;
+				font: normal normal normal 1em/1.2em Verdana,Arial,sans;
+				}
+
 	/* aside elements */
+	#aside {
+		color: #777;
+		}
 	#aside h3 {
 		font-size: .916em;
 		line-height: 1.2em;
