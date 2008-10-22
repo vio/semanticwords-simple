@@ -20,7 +20,31 @@ function sw_prepare_theme() {
 
 }
 
+// load php file from include
+function sw_include( $file ) {
+	$_file_path = TEMPLATEPATH . '/inc/' . $file . '.php';
+
+	if( file_exists( $_file_path ) ) :
+		include $_file_path;
+	else:
+		return 0;
+	endif;
+
+}
+
+
 // add actions to WP
 add_action( 'wp' , "sw_prepare_theme" );
+
+// DEBUG - check execution time for optimization
+$sw_timer = null;
+function sw_timer_start() {
+	global $sw_timer;
+	 $sw_timer=microtime(true);
+}
+function sw_timer_stop() {
+	global $sw_timer;
+	echo 'Exe time = ' . round((microtime(true) - $sw_timer), 4) ;
+}
 
 ?>
