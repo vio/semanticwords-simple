@@ -155,7 +155,8 @@
 	 * coresponding hasLayout fix on IE stylesheet is required
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 
-	.clearfix:after 
+	.clearfix:after ,
+	#container:after
 		{
 		content: ".";
 		display: block;
@@ -209,51 +210,113 @@
 /*  -3- LAYOUT  
  *	========================================================================================================================*/
  
-	/* -3.1- accessibility-nav
+	/* -3.1- skip-links
 	 * ---------------------------------------------------------------------------------------------------------------------*/
 
-	#accessibility-nav {  
-		/* ->2.3 */
-		} 
+	#skip-links {
+		/* hidden */
+
+		}
+
+	/* -3.2- header
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	#header {
+		margin: 0;
+		border-bottom: 1px solid #DDD;
+		padding: 2em 0;
+		}
+
+		#header h1 , #header a.logo {
+			margin: 0;
+			font-size: 2em;
+			line-height: 1em;
+			}
+
+		#header h1 a, #header a.logo {
+			color: #000;
+			text-decoration: none;
+			}
+
+		#header p {
+			margin: 0;
+			color: #888;
+			}
+
+	/* -3.3- container
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	#container {
+		/* clearfix */
+		padding: 2em 0;
+		}
+
+		#content {
+			border-right: 1px solid #DDD;
+			margin-right: -100px;
+			padding-right: 2em;
+			float: left;
+			width: 35em;
+			}
+
+		#aside {
+			margin-right: -1px;
+			border-left: 1px solid #DDD;
+			padding-left: 2em;
+			float: right;
+			width: 21em;
+			}
+
+	/* -3.4- footer
+	 * ---------------------------------------------------------------------------------------------------------------------*/
+	#footer {
+		border-top: 1px solid #DDD;
+		padding: 1em 0;
+		}
 
 
 /*  -4- LAYOUT ELEMENTS  
  *  ========================================================================================================================*/
 
-/* skip-links */
-#skip-links {
-	/* hidden */
-
-	}
-
-
-/* header */
-#header {
-	margin: 0 0 2em;
-	border-bottom: 1px solid #CCC;
-	padding: 2em 0;
-	}
-
-	#header h1 , #header a.logo {
-		margin: 0;
-		font-size: 2em;
-		line-height: 1em;
+	/* aside elements */
+	#aside h3 {
+		font-size: .916em;
+		line-height: 1.2em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
 		}
 
-	#header h1 a, #header a.logo {
-		color: #000;
-		text-decoration: none;
+	#aside p {
+		margin: 0.5em 0;
 		}
 
-	#header p {
-		margin: 0;
-		color: #888;
+	#aside .pages {
+		margin: 0 0 1em;
 		}
 
+	#aside .about {
+		margin: 0 0 1em;
+		}
 
-/* footer */
-#footer {
-	border-top: 1px solid #CCC;
-	padding: 1em 0;
-	}
+	#aside .search {
+		margin: 0 0 1em -2em;
+		border: 1px solid #DDD;
+		border-left: 0;
+		padding: 1em 1em 1em 2em;
+		background: #EEE;
+		}
+
+		#aside .search legend {
+			display: none;
+			}
+
+	#aside .archives {
+		margin: 0 0 1em;
+		}
+
+	#aside .categories {
+		margin: 0 0 1em;
+		}
+
+	#aside .links {
+		margin: 0 0 1em;
+		}
 
