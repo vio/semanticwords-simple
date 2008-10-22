@@ -1,4 +1,8 @@
 <?
+/*
+ * @TODO - public only non null posts nav links
+ *
+ */
 
 // ui url
 define( SW_UI, get_bloginfo( "template_url" ) . "/ui" );
