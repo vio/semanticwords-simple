@@ -1,7 +1,7 @@
 <?php get_header() ?>
 	
 	<div id="content">	
-		<h1>Posts</h1>
+		<h1><?php echo single_cat_title() ?></h1>
 
 		<?php if( have_posts()) : ?>
 			<ol class="posts">	

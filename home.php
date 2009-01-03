@@ -1,7 +1,7 @@
 <?php get_header() ?>
 	
 	<div id="content">	
-		<h1>Posts</h1>
+		<h2><?php _e('Latest posts')?></h2>
 
 		<?php if( have_posts()) : ?>
 			<ol class="posts">	
