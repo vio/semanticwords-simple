@@ -386,6 +386,7 @@
 	#aside {
 		color: #777;
 		}
+
 	#aside h3 {
 		font-size: .916em;
 		line-height: 1.2em;
@@ -397,16 +398,27 @@
 		margin: 0.5em 0;
 		}
 
+	#aside ul, #aside ol {
+		margin: .5em 0;
+		}
+
+	#aside li {
+		margin: 0;
+		list-style: outside none none;
+		}
+
+		
+	/* aside blocks */
 	#aside .pages {
-		margin: 0 0 1em;
+		margin: 0 0 2em;
 		}
 
 	#aside .about {
-		margin: 0 0 1em;
+		margin: 0 0 2em;
 		}
 
 	#aside .search {
-		margin: 0 0 1em -2em;
+		margin: 0 0 2em -2em;
 		border: 1px solid #DDD;
 		border-left: 0;
 		padding: 1em 1em 1em 2em;

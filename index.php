@@ -1,8 +1,8 @@
 <?php get_header() ?>
 	
 	<div id="content">	
-		<h1>Latest posts</h1>
-		
+		<h2>Latest posts</h2>
+
 		<?php if( have_posts()) : ?>
 			<ol class="posts">	
 				
@@ -22,13 +22,11 @@
 
 		<?php 
 		else: 
-		// nothing to show
 
-			// include ui/not_found.php
+			// If nothing to show, include ui/not_found.php
 			sw_include( 'not_found' ); 
 		
 		endif; ?>
-		
 	</div>
 	<hr />
 
