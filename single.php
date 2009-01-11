@@ -16,10 +16,10 @@
 
 		<?php sw_include( 'add_comment' ) ?>
 				
+		<?php comments_template(); ?>
 		<?php 
 		endwhile; 
 		else: 
-
 			// If nothing to show, include ui/not_found.php
 			sw_include( 'not_found' ); 
 		
